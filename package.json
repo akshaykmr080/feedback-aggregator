@@ -12,8 +12,6 @@
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \" npm run server \" \" npm run client \" ",
-    //To install client side dependencies on heroku after heroku automatically builds the server side dependencies.
-    // '--prefix client' ensures that the command is run from inside the client directory
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm i --prefix client && npm run build --prefix client" 
   },
   "author": "",
